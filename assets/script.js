@@ -1,61 +1,42 @@
-const eventDate = new Date("2026-09-10T09:00:00-04:00").getTime();
-
-function updateCountdown() {
-  const now = Date.now();
-  const distance = Math.max(0, eventDate - now);
-  const days = Math.floor(distance / 86400000);
-  const hours = Math.floor((distance % 86400000) / 3600000);
-  const minutes = Math.floor((distance % 3600000) / 60000);
-  const seconds = Math.floor((distance % 60000) / 1000);
-
-  document.getElementById("days").textContent = String(days).padStart(3, "0");
-  document.getElementById("hours").textContent = String(hours).padStart(2, "0");
-  document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
-  document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+const eventDate = new Date("2026-09-11T08:00:00-04:00").getTime();
+function updateCountdown(){
+  const distance=Math.max(0,eventDate-Date.now());
+  const values={
+    days:Math.floor(distance/86400000),
+    hours:Math.floor((distance%86400000)/3600000),
+    minutes:Math.floor((distance%3600000)/60000),
+    seconds:Math.floor((distance%60000)/1000)
+  };
+  Object.entries(values).forEach(([id,value])=>{
+    const el=document.getElementById(id);
+    if(el) el.textContent=String(value).padStart(id==="days"?3:2,"0");
+  });
 }
-updateCountdown();
-setInterval(updateCountdown, 1000);
+updateCountdown();setInterval(updateCountdown,1000);
 
-const menuButton = document.querySelector(".menu-toggle");
-const nav = document.querySelector(".main-nav");
-menuButton.addEventListener("click", () => {
-  const open = nav.classList.toggle("open");
-  menuButton.setAttribute("aria-expanded", String(open));
+const menu=document.querySelector(".main-nav");
+const toggle=document.querySelector(".menu-toggle");
+toggle.addEventListener("click",()=>{
+  const open=menu.classList.toggle("open");
+  toggle.setAttribute("aria-expanded",String(open));
 });
-nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
-  nav.classList.remove("open");
-  menuButton.setAttribute("aria-expanded", "false");
+menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{
+  menu.classList.remove("open");toggle.setAttribute("aria-expanded","false");
 }));
 
-const eventDetails = {
-  symposium: {
-    title: "Professional Symposium",
-    body: "Add the confirmed time, venue, featured speakers, session topics, parking instructions, attire, and registration requirements."
-  },
-  friday: {
-    title: "Friday Events",
-    body: "Add golf course information, check-in and tee times, pricing, pairings, transportation, and Welcome Reception details."
-  },
-  saturday: {
-    title: "Saturday Events",
-    body: "Add service project logistics, cookout details, family guidance, banquet timing, venue, attire, and seating information."
-  },
-  sunday: {
-    title: "Sunday Events",
-    body: "Add worship location, service time, farewell fellowship details, parking, and final weekend reminders."
-  }
+const details={
+ golf:{title:"Friday Golf Outing",body:"Add the confirmed course, tee time, participant fee, sponsorship packages, transportation, dress expectations, and registration deadline."},
+ welcome:{title:"Welcome Reception",body:"Add the confirmed venue, arrival time, program outline, attire, parking information, and guest policy."},
+ family:{title:"Family Cookout + Basketball Game",body:"Add the confirmed location, start and end times, family activities, food details, basketball format, parking, and weather plan."},
+ banquet:{title:"45th Anniversary Banquet",body:"Add the banquet venue, reception time, dinner program, attire, honorees, seating process, accessibility information, and ticket deadline."},
+ sunday:{title:"Sunday Worship, Farewell Fellowship + Symposium",body:"Add the worship location and time, farewell fellowship details, and the professional symposium venue, speakers, topics, and evening schedule."}
 };
-
-const dialog = document.getElementById("event-dialog");
-const dialogContent = document.getElementById("dialog-content");
-document.querySelectorAll("[data-modal]").forEach(button => {
-  button.addEventListener("click", () => {
-    const detail = eventDetails[button.dataset.modal];
-    dialogContent.innerHTML = `<p class="eyebrow">Event Details</p><h2>${detail.title}</h2><p>${detail.body}</p>`;
-    dialog.showModal();
-  });
-});
-document.querySelector(".dialog-close").addEventListener("click", () => dialog.close());
-dialog.addEventListener("click", e => {
-  if (e.target === dialog) dialog.close();
-});
+const dialog=document.getElementById("event-dialog");
+const content=document.getElementById("dialog-content");
+document.querySelectorAll("[data-modal]").forEach(btn=>btn.addEventListener("click",()=>{
+  const item=details[btn.dataset.modal];
+  content.innerHTML=`<p class="eyebrow">Event Details</p><h2>${item.title}</h2><p>${item.body}</p>`;
+  dialog.showModal();
+}));
+document.querySelector(".dialog-close").addEventListener("click",()=>dialog.close());
+dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close()});

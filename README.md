@@ -1,38 +1,27 @@
-# KX45 Experience — Starter Website
+# KX45 Homepage Version 2
 
-This folder contains a complete static website starter.
+This update includes:
+- Official KX45 anniversary logo
+- Historic and current chapter photography
+- September 11–13, 2026 dates
+- Countdown beginning Friday, September 11
+- Golf Outing moved to Friday
+- Family Cookout + Basketball Game
+- Professional Symposium moved to Sunday evening
+- Revised hero, navigation, schedule, legacy preview, gallery, and mobile layout
 
-## Files
-- `index.html` — page structure and content
-- `assets/styles.css` — colors, typography, layout, and mobile styling
-- `assets/script.js` — countdown, mobile menu, and event-detail popups
+## Upload instructions
+Upload the contents of this folder to the root of the existing `kx45-experience` GitHub repository.
 
-## Open locally
-Double-click `index.html` to preview it in a browser.
+Replace:
+- `index.html`
+- `assets/styles.css`
+- `assets/script.js`
 
-## First edits to make
-1. Replace placeholder event details, links, hotel information, and FAQs.
-2. Replace the registration URL in `index.html`.
-3. Add the final KX45 logo and approved chapter images.
-4. Confirm the event start time used in `assets/script.js`.
-5. Replace the QR placeholder after the live site URL is created.
+Add:
+- the entire `assets/images` folder
 
-## Free hosting
-The folder can be published free through:
-- GitHub Pages
-- Cloudflare Pages
-- Netlify
+Commit message:
+`Launch KX45 homepage version 2`
 
-No build process is required. Upload the entire folder as-is.
-
-## Recommended content workflow
-Maintain a single event-information spreadsheet for:
-- Date and time
-- Venue and address
-- Attire
-- Parking
-- Registration link
-- Contact
-- Last updated date
-
-Then copy approved information into this site.
+Vercel should automatically deploy the update after the commit.
