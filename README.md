@@ -1,27 +1,15 @@
-# KX45 Homepage Version 2
+# KX45 Homepage Version 2.1
 
-This update includes:
-- Official KX45 anniversary logo
-- Historic and current chapter photography
-- September 11–13, 2026 dates
-- Countdown beginning Friday, September 11
-- Golf Outing moved to Friday
-- Family Cookout + Basketball Game
-- Professional Symposium moved to Sunday evening
-- Revised hero, navigation, schedule, legacy preview, gallery, and mobile layout
+This revision:
+- Restores a lighter cream, burgundy, and gold visual direction
+- Uses one clean hero photograph instead of a dark split-image collage
+- Reduces heavy black sections
+- Uses `object-fit: contain` for images that should not be cropped
+- Uses custom focal positions for wide photographs
+- Simplifies the legacy and gallery layouts
+- Keeps all schedule and date updates from Version 2
 
-## Upload instructions
-Upload the contents of this folder to the root of the existing `kx45-experience` GitHub repository.
-
-Replace:
-- `index.html`
-- `assets/styles.css`
-- `assets/script.js`
-
-Add:
-- the entire `assets/images` folder
+Upload the entire folder contents to the root of the existing GitHub repository.
 
 Commit message:
-`Launch KX45 homepage version 2`
-
-Vercel should automatically deploy the update after the commit.
+`Refine KX45 homepage visual design`
