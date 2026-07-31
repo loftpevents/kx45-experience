@@ -32,3 +32,6 @@ dialog{max-width:620px;width:calc(100% - 30px);border:1px solid var(--gold);back
 .legacy-gallery-link{display:inline-flex;align-items:center;justify-content:center;margin:0 auto;padding:13px 24px;border:1px solid var(--burgundy);border-radius:5px;background:var(--burgundy);color:#fff!important;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;text-decoration:none!important;box-shadow:0 8px 18px rgba(134,28,43,.18);transition:transform .2s ease,background .2s ease,color .2s ease,border-color .2s ease}
 .legacy-gallery-link:hover,.legacy-gallery-link:focus-visible{background:var(--gold);border-color:var(--gold);color:#2e1715!important;transform:translateY(-2px)}
 @media(max-width:640px){.legacy-gallery-link{width:100%;max-width:310px}.legacy-gallery-copy{max-width:300px}}
+
+/* Connected social links */
+.social a{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--burgundy);text-decoration:none;transition:background .2s ease,color .2s ease,transform .2s ease}.social a:hover,.social a:focus-visible{background:var(--burgundy);color:#fff;transform:translateY(-2px);outline:none}.social svg{width:20px;height:20px;fill:currentColor;stroke:currentColor;stroke-width:1.8}.social svg rect,.social svg circle{fill:none}.social svg .icon-fill{fill:currentColor;stroke:none}
