@@ -17,3 +17,14 @@ Upload all files and folders to the root of the existing GitHub repository.
 
 Commit message:
 Apply approved KX45 homepage template
+
+## Legacy gallery
+The Legacy navigation now opens `gallery.html`.
+
+To add future photos:
+1. Place the optimized image in `assets/images/legacy-gallery/`.
+2. Open `assets/gallery-data.js`.
+3. Copy one existing photo object, update `src`, `alt`, and `era`, and add it before the closing bracket.
+4. Redeploy the site.
+
+The gallery supports lazy loading, a full-screen lightbox, previous/next controls, keyboard arrows, and a compact view.

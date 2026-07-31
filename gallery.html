@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f1e7">
+  <meta name="description" content="Kappa Chi legacy photo gallery celebrating 45 years of brotherhood, leadership, service, and memories.">
+  <title>Legacy Gallery | KX45 Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/gallery.css">
+  <script defer src="assets/gallery-data.js"></script>
+  <script defer src="assets/gallery.js"></script>
+</head>
+<body class="gallery-page">
+<header class="site-header">
+  <a href="index.html#home" class="brand">
+    <img src="assets/images/kx45-logo-transparent.png" alt="KX45 anniversary logo">
+    <div><strong>KX45</strong><span>EXPERIENCE</span></div>
+  </a>
+  <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+  <nav id="main-nav">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#schedule">Schedule</a>
+    <a href="index.html#registration">Registration</a>
+    <a href="index.html#hotel">Hotel & Travel</a>
+    <a href="index.html#events">Events</a>
+    <a href="gallery.html" class="active">Legacy</a>
+    <a href="index.html#faqs">FAQs</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="gallery-hero">
+    <div>
+      <p class="eyebrow">45 Years in Pictures</p>
+      <h1>Our Legacy.<br><span>Our Brotherhood.</span></h1>
+      <p>From campus traditions and fellowship to leadership and lifelong bonds, this archive honors the moments that shaped Kappa Chi.</p>
+      <a class="button primary" href="#legacy-gallery">Explore the Gallery</a>
+    </div>
+    <div class="gallery-hero-collage" aria-hidden="true">
+      <img src="assets/images/legacy-gallery/kx-legacy-01.webp" alt="">
+      <img src="assets/images/legacy-gallery/kx-legacy-02.webp" alt="">
+      <img src="assets/images/legacy-gallery/kx-legacy-03.webp" alt="">
+    </div>
+  </section>
+
+  <section class="gallery-intro">
+    <p class="eyebrow">The KX Archive</p>
+    <h2>Countless Memories. One Brotherhood.</h2>
+    <p>Tap any photo to view it full screen. This gallery is structured so additional images can be added to the archive as they are collected.</p>
+  </section>
+
+  <section id="legacy-gallery" class="gallery-shell">
+    <div class="gallery-toolbar">
+      <p><strong id="photo-count">0</strong> photographs in the archive</p>
+      <button id="view-toggle" type="button" aria-pressed="false">Compact View</button>
+    </div>
+    <div id="gallery-grid" class="legacy-gallery-grid" aria-live="polite"></div>
+  </section>
+
+  <section class="gallery-contribution">
+    <div>
+      <p class="eyebrow">Help Preserve the Story</p>
+      <h2>Have photos for the archive?</h2>
+      <p>Additional photographs can be added to this gallery at any time as the chapter’s historical collection grows.</p>
+    </div>
+    <a href="index.html#contact" class="button cream-button">Contact the Committee</a>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="footer-brand">
+    <img src="assets/images/kx45-logo-transparent.png" alt="">
+    <div><h3>Kappa Chi</h3><p>The American University Chapter<br>Kappa Alpha Psi Fraternity, Inc.</p><em>Strengthening Our Bond.<br>Building for the Future.</em></div>
+  </div>
+  <div class="footer-links"><h4>Quick Links</h4><a href="index.html#schedule">Schedule</a><a href="index.html#registration">Registration</a><a href="index.html#hotel">Hotel & Travel</a><a href="index.html#events">Events</a><a href="gallery.html">Legacy Gallery</a></div>
+  <div class="copyright">© 2026 Kappa Chi Chapter. All rights reserved. <span>#KX45 &nbsp; | &nbsp; #StrengtheningOurBond</span></div>
+</footer>
+
+<dialog id="gallery-lightbox" class="gallery-lightbox">
+  <button class="lightbox-close" aria-label="Close photo">×</button>
+  <button class="lightbox-prev" aria-label="Previous photo">‹</button>
+  <figure><img id="lightbox-image" src="" alt=""><figcaption id="lightbox-caption"></figcaption></figure>
+  <button class="lightbox-next" aria-label="Next photo">›</button>
+</dialog>
+</body>
+</html>
