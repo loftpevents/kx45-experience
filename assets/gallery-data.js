@@ -93,5 +93,55 @@ window.KX45_GALLERY = [
     "src": "assets/images/legacy-gallery/kx-legacy-19.webp",
     "alt": "Kappa Chi brotherhood legacy photograph 19",
     "era": "KX45 Archive"
+  },
+  {
+    "src": "assets/images/legacy-gallery/kx-legacy-20.webp",
+    "alt": "Kappa Chi brotherhood legacy photograph 20",
+    "era": "KX45 Archive"
+  },
+  {
+    "src": "assets/images/legacy-gallery/kx-legacy-21.webp",
+    "alt": "Kappa Chi brotherhood legacy photograph 21",
+    "era": "KX45 Archive"
+  },
+  {
+    "src": "assets/images/legacy-gallery/kx-legacy-22.webp",
+    "alt": "Kappa Chi brotherhood legacy photograph 22",
+    "era": "KX45 Archive"
+  },
+  {
+    "src": "assets/images/legacy-gallery/kx-legacy-23.webp",
+    "alt": "Kappa Chi brotherhood legacy photograph 23",
+    "era": "KX45 Archive"
+  },
+  {
+    "src": "assets/images/legacy-gallery/kx-legacy-24.webp",
+    "alt": "Kappa Chi brotherhood legacy photograph 24",
+    "era": "KX45 Archive"
+  },
+  {
+    "src": "assets/images/legacy-gallery/kx-legacy-25.webp",
+    "alt": "Kappa Chi brotherhood legacy photograph 25",
+    "era": "KX45 Archive"
+  },
+  {
+    "src": "assets/images/legacy-gallery/kx-legacy-26.webp",
+    "alt": "Kappa Chi brotherhood legacy photograph 26",
+    "era": "KX45 Archive"
+  },
+  {
+    "src": "assets/images/legacy-gallery/kx-legacy-27.webp",
+    "alt": "Kappa Chi brotherhood legacy photograph 27",
+    "era": "KX45 Archive"
+  },
+  {
+    "src": "assets/images/legacy-gallery/kx-legacy-28.webp",
+    "alt": "Kappa Chi brotherhood legacy photograph 28",
+    "era": "KX45 Archive"
+  },
+  {
+    "src": "assets/images/legacy-gallery/kx-legacy-29.webp",
+    "alt": "Kappa Chi brotherhood legacy photograph 29",
+    "era": "KX45 Archive"
   }
 ];
