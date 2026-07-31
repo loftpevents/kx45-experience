@@ -1,13 +1,16 @@
+const REGISTRATION_URL="https://docs.google.com/forms/d/e/1FAIpQLSfafFtm85c-pDe_pWcMQKi4x6q3ijm7qE0OJI3nkIA2sn_Tng/viewform";
 const eventDate=new Date("2026-09-11T08:00:00-04:00").getTime();
 function tick(){const d=Math.max(0,eventDate-Date.now());const v={days:Math.floor(d/86400000),hours:Math.floor((d%86400000)/3600000),minutes:Math.floor((d%3600000)/60000),seconds:Math.floor((d%60000)/1000)};Object.entries(v).forEach(([k,val])=>document.getElementById(k).textContent=String(val).padStart(k==="days"?3:2,"0"))}
 tick();setInterval(tick,1000);
 const menu=document.getElementById("main-nav"),toggle=document.querySelector(".menu-toggle");toggle.addEventListener("click",()=>{const o=menu.classList.toggle("open");toggle.setAttribute("aria-expanded",String(o))});menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>menu.classList.remove("open")));
 const details={
-golf:{title:"KX Golf Outing",body:"Friday, September 11, 2026. Optional outing hosted by Brother Kojo Mills at TPC Potomac. Time and cost per Brother are TBD."},
-welcome:{title:"KX Welcoming Fellowship",body:"Friday, September 11, 2026, from 7:00 PM to 11:00 PM at the Century Club, 1500 Delafield Place NW, Washington, DC 20011. Hosted by Brother Demek Adams."},
-convening:{title:"Chapter Status Convening",body:"Friday, September 11, 2026. Optional conversation for Brothers wishing to discuss the current state of the Chapter. Time and location TBD."},
+golf:{title:"KX Golf Outing",body:"Friday, September 11, 2026. Optional outing hosted by Brother Kojo Mills at TPC Potomac. Cost per Brother is TBD and will be paid directly to Brother Kojo Mills once final details are announced."},
+welcome:{title:"KX Welcoming Fellowship",body:"Friday, September 11, 2026, from 7:00 PM to 11:00 PM at the Century Club, 1500 Delafield Place NW, Washington, DC 20011. Hosted by Brother Demek Adams. Food is provided courtesy of Brother Wayne Porter, and Brothers are encouraged to bring a drink of choice to share."},
+convening:{title:"Chapter Status Convening",body:"Friday, September 11, 2026. Optional conversation for Brothers wishing to discuss the current state of the Chapter. The conversation will take place at the Century Club."},
 family:{title:"Old Skool v. New Skool Basketball Game & BBQ",body:"Saturday, September 12, 2026, from 11:00 AM to 2:00 PM at Volta Park, 1555 34th Street NW, Washington, DC 20007."},
-banquet:{title:"45th KX Anniversary Banquet",body:"Saturday, September 12, 2026. Brothers-only event. Estimated cost is $75–$125 per Brother. Final cost, time, and venue TBD."},
+banquet:{title:"45th KX Anniversary Banquet",body:"Saturday, September 12, 2026. Brothers-only event. The Brothers-only banquet will be held at Sixty Vines in Foggy Bottom. Cost is $150 per Brother and includes food plus two drink tickets for beer or wine. Final time will be announced."},
 worship:{title:"KX Worship",body:"Sunday, September 13, 2026, with KX Brother Johnny Newton and Jordan River Ministries at the Thurgood Marshall Center for Service and Heritage, 1816 12th Street NW, Washington, DC 20009."},
 football:{title:"KX Football Fellowship",body:"Sunday, September 13, 2026. Optional fellowship at Brother Andre Johnson’s home. Capacity is approximately 40 Brothers, with an option to enjoy cigars."}};
 const dialog=document.getElementById("event-dialog"),content=document.getElementById("dialog-content");document.querySelectorAll("[data-modal]").forEach(btn=>btn.addEventListener("click",()=>{const i=details[btn.dataset.modal];content.innerHTML=`<p class="eyebrow">Event Details</p><h2>${i.title}</h2><p>${i.body}</p>`;dialog.showModal()}));document.querySelector(".dialog-close").addEventListener("click",()=>dialog.close());dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close()});
+
+document.querySelectorAll(".registration-link").forEach(link=>{if(REGISTRATION_URL.startsWith("http")){link.href=REGISTRATION_URL;}});
