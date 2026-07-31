@@ -1,4 +1,4 @@
-const REGISTRATION_URL="PASTE_YOUR_GOOGLE_FORM_LINK_HERE";
+const REGISTRATION_URL="https://docs.google.com/forms/d/e/1FAIpQLSfafFtm85c-pDe_pWcMQKi4x6q3ijm7qE0OJI3nkIA2sn_Tng/viewform?usp=sharing&ouid=118370606888810406409";
 const eventDate=new Date("2026-09-11T08:00:00-04:00").getTime();
 function tick(){const d=Math.max(0,eventDate-Date.now());const v={days:Math.floor(d/86400000),hours:Math.floor((d%86400000)/3600000),minutes:Math.floor((d%3600000)/60000),seconds:Math.floor((d%60000)/1000)};Object.entries(v).forEach(([k,val])=>document.getElementById(k).textContent=String(val).padStart(k==="days"?3:2,"0"))}
 tick();setInterval(tick,1000);
