@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#090909">
+  <meta name="theme-color" content="#f7f1e7">
   <meta name="description" content="The official digital guide for the American University Chapter, the Kappa Chi of Kappa Alpha Psi Fraternity, Inc. 45th Anniversary Weekend.">
-  <title>KX45 Experience | September 11–13, 2026</title>
+  <title>KX45 Experience</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,222 +13,204 @@
   <script defer src="assets/script.js"></script>
 </head>
 <body>
+
 <header class="site-header">
-  <a class="brand" href="#home" aria-label="KX45 Experience home">
-    <img src="assets/images/kx45-logo.png" alt="KX45 anniversary logo">
-    <span><strong>KX45</strong><small>EXPERIENCE</small></span>
+  <a href="#home" class="brand">
+    <img src="assets/images/kx45-logo.jpg" alt="KX45 anniversary logo">
+    <div><strong>KX45</strong><span>EXPERIENCE</span></div>
   </a>
   <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
-  <nav id="main-nav" class="main-nav" aria-label="Primary navigation">
-    <a href="#home">Home</a>
-    <a href="#schedule">Weekend</a>
-    <a href="#registration">Register</a>
-    <a href="#hotel">Hotel</a>
-    <a href="#banquet">Banquet</a>
+  <nav id="main-nav">
+    <a href="#home" class="active">Home</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#registration">Registration</a>
+    <a href="#hotel">Hotel & Travel</a>
+    <a href="#events">Events</a>
     <a href="#legacy">Legacy</a>
-    <a href="#gallery">Gallery</a>
     <a href="#faqs">FAQs</a>
-    <a class="nav-cta" href="#registration">Register Now</a>
+    <a href="#contact">Contact</a>
+    <a href="#registration" class="header-cta">Register</a>
   </nav>
 </header>
 
 <main>
 <section id="home" class="hero">
-  <div class="hero-image-wrap">
-    <img src="assets/images/current-chapter.jpeg" alt="Kappa Chi chapter brothers gathered at American University">
-    <div class="hero-image-fade"></div>
+  <div class="hero-copy">
+    <p class="eyebrow">Celebrating</p>
+    <h1><span>45</span><em>Years</em><strong>of Brotherhood</strong></h1>
+    <div class="divider"></div>
+    <p class="theme">Strengthening Our Bond.<br>Building for the Future.</p>
+    <p class="official-name">The American University Chapter, the Kappa Chi of Kappa Alpha Psi Fraternity, Inc. 45th Anniversary</p>
+    <div class="hero-meta">
+      <span>September 11–13, 2026</span>
+      <span>Washington, DC</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#registration" class="button primary">Register Now</a>
+      <a href="#welcome" class="button outline">Welcome Message</a>
+    </div>
   </div>
-  <div class="hero-content">
-    <img class="hero-logo" src="assets/images/kx45-logo.png" alt="KX45 official 45th anniversary logo">
-    <p class="official-title">The American University Chapter,<br>the Kappa Chi of Kappa Alpha Psi Fraternity, Inc.<br><strong>45th Anniversary</strong></p>
-    <h1><span>45 Years</span> of Brotherhood</h1>
-    <p class="theme">Strengthening Our Bond. Building for the Future.</p>
-    <p class="event-meta"><span>September 11–13, 2026</span><i></i><span>Washington, DC</span></p>
-    <div class="button-row">
-      <a class="button primary" href="#registration">Register Now</a>
-      <a class="button secondary dark-text" href="#schedule">View Weekend Schedule</a>
-      <a class="button tertiary" href="#hotel">Hotel & Travel</a>
+
+  <div class="hero-photo">
+    <img src="assets/images/current-chapter.jpeg" alt="Kappa Chi chapter brothers gathered together">
+    <div class="countdown-card">
+      <p>The celebration begins in</p>
+      <div class="countdown-grid">
+        <div><strong id="days">000</strong><span>Days</span></div>
+        <div><strong id="hours">00</strong><span>Hrs</span></div>
+        <div><strong id="minutes">00</strong><span>Min</span></div>
+        <div><strong id="seconds">00</strong><span>Sec</span></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="countdown" aria-label="Countdown to the anniversary weekend">
-  <div class="countdown-label"><span class="calendar-icon">▦</span><p>The celebration begins in</p></div>
-  <div class="countdown-grid" aria-live="polite">
-    <div><strong id="days">000</strong><span>Days</span></div>
-    <div><strong id="hours">00</strong><span>Hours</span></div>
-    <div><strong id="minutes">00</strong><span>Minutes</span></div>
-    <div><strong id="seconds">00</strong><span>Seconds</span></div>
+<section class="photo-strip" aria-label="Kappa Chi chapter history">
+  <img src="assets/images/historic-lounge.jpg" alt="Historic chapter photograph">
+  <img src="assets/images/historic-park.png" alt="Historic outdoor brotherhood photograph">
+  <img src="assets/images/basketball.png" alt="Chapter basketball team">
+  <img src="assets/images/yard-show.png" alt="Chapter members at a yard show">
+</section>
+
+<section class="quick-access" aria-label="Quick access">
+  <a href="#schedule" class="quick-card"><div class="icon">▦</div><h3>Weekend Schedule</h3><p>See the full agenda</p><span>→</span></a>
+  <a href="#hotel" class="quick-card"><div class="icon">▰</div><h3>Hotel & Travel</h3><p>Plan your stay</p><span>→</span></a>
+  <a href="#registration" class="quick-card"><div class="icon">◆</div><h3>Register</h3><p>Secure your spot</p><span>→</span></a>
+  <a href="#events" class="quick-card"><div class="icon">⌁</div><h3>Events</h3><p>Explore the weekend</p><span>→</span></a>
+  <a href="#legacy" class="quick-card"><div class="icon">●</div><h3>Our Legacy</h3><p>45 years of impact</p><span>→</span></a>
+  <a href="#faqs" class="quick-card"><div class="icon">?</div><h3>FAQs</h3><p>Get your answers</p><span>→</span></a>
+</section>
+
+<section class="dashboard">
+  <div id="schedule" class="panel schedule-panel">
+    <div class="panel-title burgundy">Weekend at a Glance</div>
+    <div class="event-list">
+      <button data-modal="golf"><time><b>Fri</b><strong>11</strong></time><span><b>KX Golf Outing</b><small>TPC Potomac • Time & cost TBD</small></span><i>›</i></button>
+      <button data-modal="welcome"><time><b>Fri</b><strong>11</strong></time><span><b>KX Welcoming Fellowship</b><small>Century Club • 7–11 PM</small></span><i>›</i></button>
+      <button data-modal="convening"><time><b>Fri</b><strong>11</strong></time><span><b>Chapter Status Convening</b><small>Optional conversation</small></span><i>›</i></button>
+      <button data-modal="family"><time><b>Sat</b><strong>12</strong></time><span><b>Old Skool v. New Skool Basketball Game & BBQ</b><small>Volta Park • 11 AM–2 PM</small></span><i>›</i></button>
+      <button data-modal="banquet"><time><b>Sat</b><strong>12</strong></time><span><b>45th KX Anniversary Banquet</b><small>Brothers Only • $75–$125 estimated</small></span><i>›</i></button>
+      <button data-modal="worship"><time><b>Sun</b><strong>13</strong></time><span><b>KX Worship</b><small>Thurgood Marshall Center</small></span><i>›</i></button>
+      <button data-modal="football"><time><b>Sun</b><strong>13</strong></time><span><b>KX Football Fellowship</b><small>Brother Andre Johnson's home</small></span><i>›</i></button>
+    </div>
+    <a href="#events" class="panel-button">View Full Schedule</a>
+  </div>
+
+  <div class="panel updates-panel">
+    <div class="panel-title gold">Latest Updates</div>
+    <div class="update-list">
+      <article><span>▰</span><div><h4>Hotel Block</h4><p>Details coming soon.</p><a href="#hotel">Learn More →</a></div></article>
+      <article><span>◆</span><div><h4>Banquet Details</h4><p>Venue and final cost TBD.</p><a href="#events">View Details →</a></div></article>
+      <article><span>⚑</span><div><h4>Golf Outing</h4><p>Hosted by Brother Kojo Mills.</p><a href="#events">View Details →</a></div></article>
+      <article><span>▤</span><div><h4>Weekend Registration</h4><p>Official form coming soon.</p><a href="#registration">Register →</a></div></article>
+    </div>
+    <a href="#updates" class="panel-button">All Announcements</a>
+  </div>
+
+  <div id="legacy" class="panel legacy-panel">
+    <img src="assets/images/leadership.jpeg" alt="Kappa Chi chapter leadership">
+    <div class="legacy-copy">
+      <h3>One Brotherhood.<br>Countless Memories.</h3>
+      <p>For 45 years, Kappa Chi has been a beacon of leadership, scholarship, service, and unity.</p>
+      <blockquote>“Once a Brother, Always a Brother.”</blockquote>
+      <span class="signature">KX</span>
+    </div>
   </div>
 </section>
 
-<section class="quick-links" aria-label="Quick access">
-  <a href="#registration"><b>01</b><span><strong>Register</strong><small>Secure your place for the weekend</small></span></a>
-  <a href="#hotel"><b>02</b><span><strong>Hotel & Travel</strong><small>Book your stay and plan your trip</small></span></a>
-  <a href="#schedule"><b>03</b><span><strong>Golf Outing</strong><small>Friday fellowship on the green</small></span></a>
-  <a href="#banquet"><b>04</b><span><strong>Banquet</strong><small>Program, attire, and seating</small></span></a>
-  <a href="#legacy"><b>05</b><span><strong>Our Legacy</strong><small>Explore 45 years of impact</small></span></a>
-  <a href="#faqs"><b>06</b><span><strong>FAQs</strong><small>Find answers to common questions</small></span></a>
-</section>
-
-<section id="schedule" class="section light-section">
+<section id="events" class="events-section">
   <div class="section-heading">
     <p class="eyebrow">September 11–13, 2026</p>
-    <h2>Weekend at a Glance</h2>
-    <p>One weekend honoring our past, celebrating our present, and building for the future.</p>
+    <h2>Weekend Event Details</h2>
   </div>
-  <div class="schedule-grid">
-    <article class="event-card featured-photo photo-golf">
-      <div class="event-day"><span>Friday</span><strong>September 11</strong></div>
-      <div class="event-body">
-        <p class="event-type">Brotherhood & Fellowship</p>
-        <h3>Golf Outing</h3>
-        <p>Course, tee time, pricing, and sponsorship details will be added as they are confirmed.</p>
-        <button class="text-button" data-modal="golf">View details</button>
-      </div>
+
+  <div class="event-detail-grid">
+    <article>
+      <span>Friday</span><h3>KX Golf Outing</h3>
+      <p>Optional outing hosted by Brother Kojo Mills at TPC Potomac. Open to Brothers wishing to play.</p>
+      <dl><dt>Time</dt><dd>TBD</dd><dt>Cost</dt><dd>TBD</dd></dl>
     </article>
-    <article class="event-card featured-photo photo-welcome">
-      <div class="event-day"><span>Friday</span><strong>September 11</strong></div>
-      <div class="event-body">
-        <p class="event-type">Opening Celebration</p>
-        <h3>Welcome Reception</h3>
-        <p>Reconnect with brothers and guests as we officially open the anniversary weekend.</p>
-        <button class="text-button" data-modal="welcome">View details</button>
-      </div>
+    <article>
+      <span>Friday • 7–11 PM</span><h3>KX Welcoming Fellowship</h3>
+      <p>Hosted by Brother Demek Adams at the Century Club.</p>
+      <address>1500 Delafield Place NW<br>Washington, DC 20011</address>
     </article>
-    <article class="event-card featured-photo photo-family">
-      <div class="event-day"><span>Saturday</span><strong>September 12</strong></div>
-      <div class="event-body">
-        <p class="event-type">All Generations</p>
-        <h3>Family Cookout + Basketball Game</h3>
-        <p>A relaxed afternoon of fellowship, family, food, and friendly competition.</p>
-        <button class="text-button" data-modal="family">View details</button>
-      </div>
+    <article>
+      <span>Friday</span><h3>Chapter Status Convening</h3>
+      <p>Optional conversation for Brothers wishing to discuss the current state of the Chapter.</p>
     </article>
-    <article class="event-card featured-photo photo-banquet">
-      <div class="event-day"><span>Saturday</span><strong>September 12</strong></div>
-      <div class="event-body">
-        <p class="event-type">Signature Celebration</p>
-        <h3>45th Anniversary Banquet</h3>
-        <p>An evening honoring brotherhood, achievement, service, and our chapter’s enduring legacy.</p>
-        <button class="text-button" data-modal="banquet">View details</button>
-      </div>
+    <article>
+      <span>Saturday • 11 AM–2 PM</span><h3>Old Skool v. New Skool Basketball Game & BBQ</h3>
+      <p>Bringing Back Tradition at Volta Park.</p>
+      <address>1555 34th Street NW<br>Washington, DC 20007</address>
     </article>
-    <article class="event-card featured-photo photo-sunday">
-      <div class="event-day"><span>Sunday</span><strong>September 13</strong></div>
-      <div class="event-body">
-        <p class="event-type">Reflection & Vision</p>
-        <h3>Worship Service, Farewell Fellowship + Symposium</h3>
-        <p>Close the weekend in reflection and fellowship, followed by the evening professional symposium.</p>
-        <button class="text-button" data-modal="sunday">View details</button>
-      </div>
+    <article>
+      <span>Saturday</span><h3>45th KX Anniversary Banquet</h3>
+      <p>Brothers Only. Estimated cost is $75–$125 per Brother. Final cost, time, and venue TBD.</p>
+    </article>
+    <article>
+      <span>Sunday</span><h3>KX Worship</h3>
+      <p>Jordan River Ministries with KX Brother Johnny Newton.</p>
+      <address>Thurgood Marshall Center for Service and Heritage<br>1816 12th Street NW, Washington, DC 20009</address>
+    </article>
+    <article>
+      <span>Sunday</span><h3>KX Football Fellowship</h3>
+      <p>Optional fellowship at Brother Andre Johnson’s home. Capacity is approximately 40 Brothers, with an option to enjoy cigars.</p>
     </article>
   </div>
 </section>
 
-<section class="updates section dark-section">
-  <div class="section-heading light">
-    <p class="eyebrow">Stay Informed</p>
-    <h2>Latest Updates</h2>
-  </div>
-  <div class="updates-grid">
-    <article><span>Hotel</span><h3>Room block details coming soon</h3><p>The host hotel, booking deadline, group code, and reservation link will appear here.</p></article>
-    <article><span>Registration</span><h3>Weekend registration is being finalized</h3><p>Registration options will include weekend activities, banquet seating, guests, and the golf outing.</p></article>
-    <article><span>More to Come</span><h3>Additional details will be released in phases</h3><p>Check this page for confirmed venues, attire, maps, contacts, and event-specific instructions.</p></article>
-  </div>
-</section>
-
-<section id="legacy" class="section legacy-section">
-  <div class="legacy-copy">
-    <p class="eyebrow">From Generation to Generation</p>
-    <h2>Celebrating Forty-Five Years of Brotherhood, Leadership, Scholarship, Service, and Achievement.</h2>
-    <p>Across decades, the American University Chapter has united generations of brothers committed to excellence, community impact, and lifelong fellowship. This anniversary honors the people, moments, and traditions that shaped Kappa Chi while setting the vision for what comes next.</p>
-    <a class="button primary" href="#gallery">Explore Our Legacy</a>
-  </div>
-  <div class="legacy-collage" aria-label="Historic and current chapter photographs">
-    <figure class="legacy-wide"><img src="assets/images/historic-lounge.jpg" alt="Historic Kappa Chi chapter photograph"></figure>
-    <figure><img src="assets/images/historic-park.png" alt="Historic outdoor brotherhood photograph"></figure>
-    <figure><img src="assets/images/leadership.jpeg" alt="Chapter leadership group photograph"></figure>
-  </div>
-</section>
-
-<section id="registration" class="section registration-section">
+<section id="registration" class="registration-section">
   <div>
     <p class="eyebrow">Reserve Your Place</p>
-    <h2>Anniversary Registration</h2>
-    <p>The final registration experience will allow attendees to select weekend activities, banquet attendance, the Friday Golf Outing, guests, dietary needs, and other important details.</p>
+    <h2>Official Weekend Registration</h2>
+    <p>The registration form will collect Yes or No responses for each event, guest information, banquet attendance, golf participation, dietary needs, and contact details.</p>
   </div>
-  <a class="button light-button" href="https://forms.google.com" target="_blank" rel="noopener">Connect Registration Form</a>
+  <a href="https://forms.google.com" target="_blank" rel="noopener" class="button cream-button">Connect Registration Form</a>
 </section>
 
-<section id="hotel" class="section light-section">
-  <div class="split">
-    <div>
-      <p class="eyebrow">Plan Your Stay</p>
-      <h2>Hotel & Travel</h2>
-      <p>Host hotel details, the official room-block rate, booking deadline, airport guidance, parking, and local transportation information will be added here.</p>
-    </div>
-    <div class="info-panel">
-      <h3>Host Hotel</h3>
-      <p><strong>Dates:</strong> September 11–13, 2026</p>
-      <p><strong>Location:</strong> Washington, DC</p>
-      <p><strong>Booking link:</strong> Coming soon</p>
+<section id="hotel" class="hotel-section">
+  <div class="hotel-card">
+    <p class="eyebrow">Plan Your Stay</p>
+    <h2>Hotel & Travel</h2>
+    <p>Host hotel, room-block rate, booking deadline, parking, airport guidance, and transportation details will be added when confirmed.</p>
+    <div class="hotel-meta">
+      <span><b>Dates</b>September 11–13, 2026</span>
+      <span><b>Location</b>Washington, DC</span>
+      <span><b>Booking Link</b>Coming soon</span>
     </div>
   </div>
 </section>
 
-<section id="banquet" class="section banquet-section">
-  <div class="split">
-    <div>
-      <p class="eyebrow">Saturday, September 12</p>
-      <h2>45th Anniversary Banquet</h2>
-      <p>This signature evening will honor the chapter’s history, recognize achievement, and celebrate the bonds connecting every generation of Kappa Chi.</p>
-      <a class="button secondary" href="#registration">Reserve Banquet Seat</a>
-    </div>
-    <div class="banquet-card">
-      <p class="eyebrow">Details Coming Soon</p>
-      <h3>Venue, Attire & Program</h3>
-      <p>The confirmed venue, reception and program times, dress code, honorees, seating guidance, and souvenir journal details will be added in the Banquet build.</p>
-    </div>
-  </div>
-</section>
-
-<section id="gallery" class="section gallery-section">
-  <div class="section-heading">
-    <p class="eyebrow">Then. Now. Always.</p>
-    <h2>Generations of Kappa Chi</h2>
-  </div>
-  <div class="gallery-grid">
-    <img src="assets/images/historic-yard.jpg" alt="Historic chapter gathering">
-    <img src="assets/images/basketball.png" alt="Chapter basketball championship team">
-    <img src="assets/images/yard-show.png" alt="Chapter members performing outdoors">
-    <img src="assets/images/current-steps.jpeg" alt="Current chapter members gathered on steps">
-    <img src="assets/images/current-chapter.jpeg" alt="Multigenerational chapter photograph">
-    <img src="assets/images/historic-group.jpeg" alt="Historic chapter and campus community photograph">
-  </div>
-</section>
-
-<section id="faqs" class="section light-section faq-section">
+<section id="faqs" class="faq-section">
   <div class="section-heading">
     <p class="eyebrow">Need to Know</p>
     <h2>Frequently Asked Questions</h2>
   </div>
-  <div class="accordion">
-    <details><summary>When is the 45th Anniversary Weekend?</summary><p>The anniversary weekend will take place September 11–13, 2026, in Washington, DC.</p></details>
-    <details><summary>Can I register for individual activities?</summary><p>The final registration options will be confirmed during the Registration build.</p></details>
-    <details><summary>Is the Golf Outing on Friday?</summary><p>Yes. The Golf Outing is scheduled for Friday, September 11, 2026.</p></details>
-    <details><summary>When is the symposium?</summary><p>The professional symposium is scheduled for Sunday evening, September 13, 2026.</p></details>
+  <div class="faq-list">
+    <details><summary>Which events are optional?</summary><p>The Golf Outing, Chapter Status Convening, and Football Fellowship are optional opportunities.</p></details>
+    <details><summary>Who may attend the Anniversary Banquet?</summary><p>The banquet is currently planned as a Brothers-only event.</p></details>
+    <details><summary>What is the estimated banquet cost?</summary><p>The current estimate is $75–$125 per Brother. Final cost is TBD.</p></details>
+    <details><summary>Is the Football Fellowship capacity limited?</summary><p>Yes. Capacity is approximately 40 Brothers.</p></details>
   </div>
+</section>
+
+<section class="home-screen">
+  <div class="phone">KX45</div>
+  <div class="home-copy"><h3>Add the KX45 Experience to Your Home Screen</h3><p>Instant access to everything you need all weekend long.</p></div>
+  <div class="steps"><span><b>1</b>Open this site</span><span><b>2</b>Tap Share</span><span><b>3</b>Select “Add to Home Screen”</span></div>
+  <div class="qr">QR</div>
 </section>
 </main>
 
-<footer>
+<footer id="contact">
   <div class="footer-brand">
-    <img src="assets/images/kx45-logo.png" alt="">
-    <div><strong>KX45 Experience</strong><span>The American University Chapter</span></div>
+    <img src="assets/images/kx45-logo.jpg" alt="">
+    <div><h3>Kappa Chi</h3><p>The American University Chapter<br>Kappa Alpha Psi Fraternity, Inc.</p><em>Strengthening Our Bond.<br>Building for the Future.</em></div>
   </div>
-  <p>Strengthening Our Bond. Building for the Future.</p>
-  <p>© 2026 Kappa Chi Chapter. All rights reserved.</p>
+  <div class="footer-links"><h4>Quick Links</h4><a href="#schedule">Schedule</a><a href="#registration">Registration</a><a href="#hotel">Hotel & Travel</a><a href="#events">Events</a><a href="#legacy">Legacy</a><a href="#faqs">FAQs</a></div>
+  <div class="social"><h4>Stay Connected</h4><div><span>f</span><span>◎</span><span>in</span><span>✉</span></div></div>
+  <div class="copyright">© 2026 Kappa Chi Chapter. All rights reserved. <span>#KX45 &nbsp; | &nbsp; #StrengtheningOurBond</span></div>
 </footer>
 
 <dialog id="event-dialog">

@@ -1,42 +1,13 @@
-const eventDate = new Date("2026-09-11T08:00:00-04:00").getTime();
-function updateCountdown(){
-  const distance=Math.max(0,eventDate-Date.now());
-  const values={
-    days:Math.floor(distance/86400000),
-    hours:Math.floor((distance%86400000)/3600000),
-    minutes:Math.floor((distance%3600000)/60000),
-    seconds:Math.floor((distance%60000)/1000)
-  };
-  Object.entries(values).forEach(([id,value])=>{
-    const el=document.getElementById(id);
-    if(el) el.textContent=String(value).padStart(id==="days"?3:2,"0");
-  });
-}
-updateCountdown();setInterval(updateCountdown,1000);
-
-const menu=document.querySelector(".main-nav");
-const toggle=document.querySelector(".menu-toggle");
-toggle.addEventListener("click",()=>{
-  const open=menu.classList.toggle("open");
-  toggle.setAttribute("aria-expanded",String(open));
-});
-menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{
-  menu.classList.remove("open");toggle.setAttribute("aria-expanded","false");
-}));
-
+const eventDate=new Date("2026-09-11T08:00:00-04:00").getTime();
+function tick(){const d=Math.max(0,eventDate-Date.now());const v={days:Math.floor(d/86400000),hours:Math.floor((d%86400000)/3600000),minutes:Math.floor((d%3600000)/60000),seconds:Math.floor((d%60000)/1000)};Object.entries(v).forEach(([k,val])=>document.getElementById(k).textContent=String(val).padStart(k==="days"?3:2,"0"))}
+tick();setInterval(tick,1000);
+const menu=document.getElementById("main-nav"),toggle=document.querySelector(".menu-toggle");toggle.addEventListener("click",()=>{const o=menu.classList.toggle("open");toggle.setAttribute("aria-expanded",String(o))});menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>menu.classList.remove("open")));
 const details={
- golf:{title:"Friday Golf Outing",body:"Add the confirmed course, tee time, participant fee, sponsorship packages, transportation, dress expectations, and registration deadline."},
- welcome:{title:"Welcome Reception",body:"Add the confirmed venue, arrival time, program outline, attire, parking information, and guest policy."},
- family:{title:"Family Cookout + Basketball Game",body:"Add the confirmed location, start and end times, family activities, food details, basketball format, parking, and weather plan."},
- banquet:{title:"45th Anniversary Banquet",body:"Add the banquet venue, reception time, dinner program, attire, honorees, seating process, accessibility information, and ticket deadline."},
- sunday:{title:"Sunday Worship, Farewell Fellowship + Symposium",body:"Add the worship location and time, farewell fellowship details, and the professional symposium venue, speakers, topics, and evening schedule."}
-};
-const dialog=document.getElementById("event-dialog");
-const content=document.getElementById("dialog-content");
-document.querySelectorAll("[data-modal]").forEach(btn=>btn.addEventListener("click",()=>{
-  const item=details[btn.dataset.modal];
-  content.innerHTML=`<p class="eyebrow">Event Details</p><h2>${item.title}</h2><p>${item.body}</p>`;
-  dialog.showModal();
-}));
-document.querySelector(".dialog-close").addEventListener("click",()=>dialog.close());
-dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close()});
+golf:{title:"KX Golf Outing",body:"Friday, September 11, 2026. Optional outing hosted by Brother Kojo Mills at TPC Potomac. Time and cost per Brother are TBD."},
+welcome:{title:"KX Welcoming Fellowship",body:"Friday, September 11, 2026, from 7:00 PM to 11:00 PM at the Century Club, 1500 Delafield Place NW, Washington, DC 20011. Hosted by Brother Demek Adams."},
+convening:{title:"Chapter Status Convening",body:"Friday, September 11, 2026. Optional conversation for Brothers wishing to discuss the current state of the Chapter. Time and location TBD."},
+family:{title:"Old Skool v. New Skool Basketball Game & BBQ",body:"Saturday, September 12, 2026, from 11:00 AM to 2:00 PM at Volta Park, 1555 34th Street NW, Washington, DC 20007."},
+banquet:{title:"45th KX Anniversary Banquet",body:"Saturday, September 12, 2026. Brothers-only event. Estimated cost is $75–$125 per Brother. Final cost, time, and venue TBD."},
+worship:{title:"KX Worship",body:"Sunday, September 13, 2026, with KX Brother Johnny Newton and Jordan River Ministries at the Thurgood Marshall Center for Service and Heritage, 1816 12th Street NW, Washington, DC 20009."},
+football:{title:"KX Football Fellowship",body:"Sunday, September 13, 2026. Optional fellowship at Brother Andre Johnson’s home. Capacity is approximately 40 Brothers, with an option to enjoy cigars."}};
+const dialog=document.getElementById("event-dialog"),content=document.getElementById("dialog-content");document.querySelectorAll("[data-modal]").forEach(btn=>btn.addEventListener("click",()=>{const i=details[btn.dataset.modal];content.innerHTML=`<p class="eyebrow">Event Details</p><h2>${i.title}</h2><p>${i.body}</p>`;dialog.showModal()}));document.querySelector(".dialog-close").addEventListener("click",()=>dialog.close());dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close()});

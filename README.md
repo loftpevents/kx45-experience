@@ -1,15 +1,19 @@
-# KX45 Homepage Version 2.1
+# KX45 Template Layout Website
 
-This revision:
-- Restores a lighter cream, burgundy, and gold visual direction
-- Uses one clean hero photograph instead of a dark split-image collage
-- Reduces heavy black sections
-- Uses `object-fit: contain` for images that should not be cropped
-- Uses custom focal positions for wide photographs
-- Simplifies the legacy and gallery layouts
-- Keeps all schedule and date updates from Version 2
+This redesign mirrors the approved light cream, burgundy, and gold homepage layout.
 
-Upload the entire folder contents to the root of the existing GitHub repository.
+Included:
+- Image-led hero and countdown
+- Photo strip using provided chapter images
+- Six quick-access cards
+- Weekend schedule panel with all seven confirmed events
+- Latest updates panel
+- Legacy panel
+- Full event details section
+- Registration, hotel, FAQ, home-screen, and footer sections
+- Responsive desktop and mobile layouts
+
+Upload all files and folders to the root of the existing GitHub repository.
 
 Commit message:
-`Refine KX45 homepage visual design`
+Apply approved KX45 homepage template
